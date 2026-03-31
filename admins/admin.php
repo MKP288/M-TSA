@@ -1,11 +1,8 @@
 <?php
-<<<<<<< HEAD
 // Authentication check - MUST be admin to access this page
 require_once __DIR__ . '/config/auth_check.php';
 require_role('admin');
 
-=======
->>>>>>> 7fbec23cb932c4286c6ffe02a6e4b98f48321fe6
 // Database connection
 require_once 'db-config.php';
 
@@ -32,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $sql = "DELETE FROM events WHERE id = $id";
                 mysqli_query($conn, $sql);
                 break;
-<<<<<<< HEAD
 
             case 'add_user':
                 $firstName = mysqli_real_escape_string($conn, $_POST['first_name']);
@@ -98,20 +94,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 }
                 break;
-=======
->>>>>>> 7fbec23cb932c4286c6ffe02a6e4b98f48321fe6
         }
     }
 }
 
 // Fetch all events
 $events = mysqli_query($conn, "SELECT * FROM events ORDER BY event_date DESC");
-<<<<<<< HEAD
 
 // Fetch all users
 $users = mysqli_query($conn, "SELECT id, first_name, last_name, email, role, is_verified, created_at FROM users ORDER BY created_at DESC");
-=======
->>>>>>> 7fbec23cb932c4286c6ffe02a6e4b98f48321fe6
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -289,7 +280,6 @@ $users = mysqli_query($conn, "SELECT id, first_name, last_name, email, role, is_
         .delete-btn:hover {
             background: #c82333;
         }
-<<<<<<< HEAD
 
         .edit-btn {
             background: #007bff;
@@ -381,8 +371,6 @@ $users = mysqli_query($conn, "SELECT id, first_name, last_name, email, role, is_
             grid-template-columns: 1fr 1fr;
             gap: 15px;
         }
-=======
->>>>>>> 7fbec23cb932c4286c6ffe02a6e4b98f48321fe6
     </style>
 </head>
 <body>
@@ -390,12 +378,8 @@ $users = mysqli_query($conn, "SELECT id, first_name, last_name, email, role, is_
         <header>
             <h1>📊 Admin Dashboard</h1>
             <div class="dashboard-nav">
-<<<<<<< HEAD
                 <a href="/~ulkere/M-TSA/index.html" class="nav-btn secondary">← Back to Website</a>
                 <a href="#users" class="nav-btn">Manage Users</a>
-=======
-                <a href="index.html" class="nav-btn secondary">← Back to Website</a>
->>>>>>> 7fbec23cb932c4286c6ffe02a6e4b98f48321fe6
                 <a href="#events" class="nav-btn">Manage Events</a>
                 <a href="#gallery" class="nav-btn">Manage Gallery</a>
             </div>
@@ -475,7 +459,6 @@ $users = mysqli_query($conn, "SELECT id, first_name, last_name, email, role, is_
                 <p>No events found. Add your first event above!</p>
             <?php endif; ?>
         </div>
-<<<<<<< HEAD
 
         <!-- User Management Section -->
         <div class="section" id="users">
@@ -653,8 +636,5 @@ $users = mysqli_query($conn, "SELECT id, first_name, last_name, email, role, is_
             }
         }
     </script>
-=======
-    </div>
->>>>>>> 7fbec23cb932c4286c6ffe02a6e4b98f48321fe6
 </body>
 </html>

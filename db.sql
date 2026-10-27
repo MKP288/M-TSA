@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `princm8_db`
+-- Database: `app_db`
 --
 
 -- --------------------------------------------------------
@@ -38,13 +38,13 @@ CREATE TABLE `login_attempts` (
 --
 
 INSERT INTO `login_attempts` (`id`, `email`, `attempted_at`) VALUES
-(7, 'marckeannep@gmail.com', '2026-03-25 19:05:54'),
-(1, 'princm8@mcmaster.ca', '2026-03-25 17:04:44'),
-(2, 'princm8@mcmaster.ca', '2026-03-25 17:39:01'),
-(3, 'princm8@mcmaster.ca', '2026-03-25 17:46:28'),
-(4, 'princm8@mcmaster.ca', '2026-03-25 17:46:41'),
-(5, 'princm8@mcmaster.ca', '2026-03-25 17:46:58'),
-(6, 'princm8@mcmaster.ca', '2026-03-25 18:14:56');
+(7, 'user2@example.com', '2026-03-25 19:05:54'),
+(1, 'user1@example.com', '2026-03-25 17:04:44'),
+(2, 'user1@example.com', '2026-03-25 17:39:01'),
+(3, 'user1@example.com', '2026-03-25 17:46:28'),
+(4, 'user1@example.com', '2026-03-25 17:46:41'),
+(5, 'user1@example.com', '2026-03-25 17:46:58'),
+(6, 'user1@example.com', '2026-03-25 18:14:56');
 
 -- --------------------------------------------------------
 
@@ -86,7 +86,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password_hash`, `role`, `is_verified`, `verify_token`, `reset_token`, `reset_expires`, `created_at`, `updated_at`) VALUES
-(1, 'Marc Keanne', 'Principe', 'marckeannep@gmail.com', '$2y$12$jUDYaHUBL7uh8iyGFQ806.7Pvu2KidtfASUlFycwcHyrG/lyxuqUG', 'member', 0, 'd6f4824013adf9aa22a6b6822cabc03abda486041af939c998bfc823c3a06a33', NULL, NULL, '2026-03-25 17:04:20', '2026-03-25 19:05:30');
+(1, 'Jane', 'Doe', 'user2@example.com', '$2y$12$jUDYaHUBL7uh8iyGFQ806.7Pvu2KidtfASUlFycwcHyrG/lyxuqUG', 'member', 0, 'd6f4824013adf9aa22a6b6822cabc03abda486041af939c998bfc823c3a06a33', NULL, NULL, '2026-03-25 17:04:20', '2026-03-25 19:05:30');
 
 --
 -- Indexes for dumped tables
